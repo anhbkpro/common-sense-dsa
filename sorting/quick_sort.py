@@ -22,5 +22,15 @@ def partition(left_index, right_index):
     return left_index
 
 
+def quick_sort(left_index, right_index):
+    if right_index - left_index <= 0:
+        return
+    pivot_index = partition(left_index, right_index)
+
+    quick_sort(left_index, pivot_index -1)
+    quick_sort(pivot_index + 1, right_index)
+
+
 array = [0, 5, 2, 1, 6, 3]
-print(partition(0, len(array) - 1))
+quick_sort(0, len(array) - 1)
+print(array)
