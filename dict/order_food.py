@@ -1,13 +1,22 @@
-menu = {'sandwich': 10, 'tea': 7}
-def order():
+MENU = {'sandwich': 10, 'tea': 7, 'salad': 9}
+
+def restaurant():
 	total = 0
 	while True:
-		item = input('Order: ')
-		if item == '':
+		order = input('Order: ').strip()
+		
+		if not order:
 			break
-		if item in menu:
-			total += menu.get(item)
-			print(f'{item} costs {menu.get(item)}, total is {total}')
+		
+		if order in MENU:
+			price = MENU.get(order)
+			total += price
+			print(f'{order} costs {price}, total is {total}')
+
 		else:
 			print(f'Sorry, we are fresh out of elephant today.')
+
 	print(f'Your total is {total}')
+
+
+restaurant()
