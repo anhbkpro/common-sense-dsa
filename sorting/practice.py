@@ -50,16 +50,20 @@ def find_greatest_number_withNexp2(array):
             if item <= value:
                 break
         return item
-	
 
- def max(array):
-	 for item in enumerate(array):
-		 itemIsGreatestNumber = True
-		 for value in enumerate(array):
-			if value > item:
-				itemIsGreatestNumber = False
-		if itemIsGreatestNumber:
-			return item
+
+def max(array):
+    """
+    This implementation uses nested loops and is O(N2)
+    """
+    for item in array:
+        itemIsGreatestNumber = True
+        for value in array:
+            if value > item:
+                itemIsGreatestNumber = False
+        if itemIsGreatestNumber:
+            return item
+
 
 print(find_greatest_number_withNexp2(array))
-print(max(max(array)))
+print(max(array))
