@@ -14,6 +14,13 @@ class LinkedList:
             print(str(current_node.data))
             current_node = current_node.next_node
 
+    def print_last_element(self):
+        current_node = self.first_node
+        while current_node is not None:
+            if current_node.next_node is None:
+                print(str(current_node.data))
+            current_node = current_node.next_node
+
     def read(self, index):
         current_node = self.first_node
         current_index = 0
@@ -102,3 +109,5 @@ list.traverse()
 print("*** delete a node ***")
 print(list.delete_at_index(3), 'deleted')
 list.traverse()
+print("*** Exercise 3: print the last node ***")
+list.print_last_element()
