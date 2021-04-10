@@ -16,10 +16,9 @@ class LinkedList:
 
     def print_last_element(self):
         current_node = self.first_node
-        while current_node is not None:
-            if current_node.next_node is None:
-                print(str(current_node.data))
+        while current_node.next_node is not None:
             current_node = current_node.next_node
+        print(str(current_node.data))
 
     def read(self, index):
         current_node = self.first_node
