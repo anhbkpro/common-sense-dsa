@@ -31,6 +31,12 @@ class DoublyLinkedList:
         self.first_node = self.first_node.next_node
         return removed_node
 
+    def print_in_reverse(self):
+        current_node = self.last_node
+        while current_node is not None:
+            print(f'{current_node.data}')
+            current_node = current_node.previous_node
+
 
 class Queue:
     def __init__(self):
@@ -57,3 +63,6 @@ q.enqueue(3)
 print(q.read())
 q.dequeue()
 print(q.read())
+
+
+
