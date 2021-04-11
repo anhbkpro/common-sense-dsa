@@ -7,7 +7,7 @@ class TreeNode:
 
 def search(search_value, node):
     if node is None or node.value == search_value:
-        print('Found it')
+        return node
     elif node.value > search_value:
         print('Left')
         return search(search_value, node.leftChild)
