@@ -1,6 +1,3 @@
 def reverse(array):
-	length = len(array) - 1
-	for index, item in enumerate(array):
-		if index < length/2:
-			array[index], array[length - index] = array[length - index], array[index]
-
+	for index in range(0, len(array)//2):
+		array[index], array[(len(array)-1)-index] = array[(len(array)-1)-index], array[index]
