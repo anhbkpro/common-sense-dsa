@@ -20,20 +20,10 @@ for player in basketball_players:
     if player_name not in basketball_player_hash:
         basketball_player_hash[player_name] = player['team']
 
-print(basketball_player_hash)
-
-
-football_player_hash = {}
+result = []
 for player in football_players:
     player_name = player['first_name'] + ' ' + player['last_name']
-    if player_name not in football_player_hash:
-        football_player_hash[player_name] = player['team']
-
-print(football_player_hash)
-
-result = []
-for item in basketball_player_hash:
-    if item in football_player_hash:
-        result.append(item)
+    if player_name in basketball_player_hash:
+        result.append(player_name)
 
 print(result)
